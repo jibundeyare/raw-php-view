@@ -37,6 +37,6 @@ In the examples, we use the following directory structure:
         'greeting' => $greeting,
     ]);
 
-    // template/hello.php
+    // templates/hello.php
     echo $greeting;
 
