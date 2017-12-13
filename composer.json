@@ -1,0 +1,17 @@
+{
+    "name": "jibundeyare/raw-php-view",
+    "description": "A minimal php view service for raw php",
+    "homepage": "https://github.com/jibundeyare/php-view",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daishi Kaszer",
+            "email": "daishi.kaszer@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RawPhpView\\": "src/"
+        }
+    }
+}
