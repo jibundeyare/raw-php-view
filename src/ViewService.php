@@ -13,18 +13,18 @@ class ViewService
 
     public function render($view, array $parameters = array())
     {
-        return evalTemplate($this->path . '/' . $view, $parameters);
+        return self::evalTemplate($this->path . '/' . $view, $parameters);
     }
 
-}
+    public static function evalTemplate($file, array $parameters = [])
+    {
+        extract($parameters, EXTR_SKIP);
+        unset($parameters);
+        ob_start();
+        require $file;
+        unset($file);
 
-function evalTemplate($file, array $parameters = []) {
-    extract($parameters, EXTR_SKIP);
-    unset($parameters);
-    ob_start();
-    require $file;
-    unset($file);
-
-    return ob_get_clean();
+        return ob_get_clean();
+    }
 }
 
